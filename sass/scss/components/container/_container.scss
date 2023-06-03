@@ -1,0 +1,14 @@
+@import "./billing/billing", "./dashboard/dashboard", "./data_entry/data_entry",
+  "./dispatch/dispatch", "./drivers/drivers", "./equipment/equipment",
+  "./tracking/tracking";
+
+// MAIN CONTAINER STYLING
+
+.container_main {
+  width: 100vw;
+  height: calc(100vh - 5rem);
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  border: 1px solid green;
+}

@@ -1,0 +1,21 @@
+.header_nav {
+  width: 100%;
+  height: 100%;
+  //   border: 1px solid white;
+
+  .header_ul {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px dotted white;
+
+    .header_li {
+      list-style-type: none;
+      height: 100%;
+      border: 1px solid yellow;
+    }
+  }
+}
