@@ -25,18 +25,37 @@ body {
 
 .header {
   width: 100vw;
-  height: 5rem;
+  height: 7rem;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
+  background-color: #000;
 }
 
 .header_nav {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+.header_nav::after {
+  content: "";
+  width: 160rem;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: -1;
+  border-bottom: 1px solid #fff;
 }
 .header_nav .header_ul {
   width: 85%;
+  max-width: 120rem;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -45,17 +64,78 @@ body {
 }
 .header_nav .header_ul .header_li {
   list-style-type: none;
-  height: 100%;
-  border: 1px solid yellow;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.18rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.header_nav .header_ul .header_li:hover {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.6rem;
+  background-color: #05DEEC;
+  text-shadow: 0.2rem 0.2rem 0.3rem rgba(40, 38, 38, 0.716);
 }
 
 .container_main {
   width: 100vw;
-  height: calc(100vh - 5rem);
+  height: auto;
   position: absolute;
-  top: 5rem;
+  top: 9rem;
   left: 0;
-  border: 1px solid green;
+  position: relative;
+}
+.container_main .containers {
+  width: 100%;
+  position: absolute;
+  left: -100vw;
+  top: 0;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.container_main .containers:nth-child(1) {
+  height: 100vh;
+  background-color: green;
+}
+.container_main .containers:nth-child(2) {
+  height: 100vh;
+  background-color: red;
+}
+.container_main .containers:nth-child(3) {
+  height: 100vh;
+  background-color: blue;
+}
+.container_main .containers:nth-child(4) {
+  height: 100vh;
+  background-color: yellow;
+}
+.container_main .containers:nth-child(5) {
+  height: 100vh;
+  background-color: pink;
+}
+.container_main .containers:nth-child(6) {
+  height: 100vh;
+  background-color: gray;
+}
+.container_main .containers:nth-child(7) {
+  height: 100vh;
+  background-color: orange;
+}
+.container_main .moveLeft {
+  left: 0vw;
 }
 
 /*# sourceMappingURL=styles.css.map */
