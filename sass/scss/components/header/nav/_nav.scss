@@ -22,23 +22,37 @@
     align-items: center;
 
     .header_li {
+      position: relative;
       list-style-type: none;
       width: 100%;
       height: auto;
-      padding: 1rem 0;
+      padding: 0.75rem 0;
       font-size: 1.4rem;
       letter-spacing: 0.18rem;
       @include transit3;
       @include flex-center;
       cursor: pointer;
 
-      &:hover {
-        color: $color-black;
-        font-weight: 700;
-        font-size: 1.6rem;
-        background-color: $color-blue;
-        text-shadow: 0.2rem 0.2rem 0.3rem rgba(40, 38, 38, 0.716);
+      &::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        @include absol-center;
+        @include transit3;
+        border-bottom: 1px solid $color-blue;
+      }
+
+      &:hover::after {
+        width: 80%;
       }
     }
   }
+}
+
+.active {
+  color: $color-black;
+  font-weight: 700;
+  font-size: 1.6rem;
+  background-color: $color-blue;
+  text-shadow: 0.2rem 0.2rem 0.3rem rgba(40, 38, 38, 0.716);
 }
