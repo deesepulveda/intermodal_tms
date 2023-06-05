@@ -1,4 +1,4 @@
-@import "./manage_search";
+@import "./manage_sort";
 
 // MANAGE CONTAINER STYLING
 .container_manage {
@@ -11,7 +11,8 @@
   //   border: 1px solid red;
 
   .container_manage_icon_boxes {
-    width: 100%;
+    @include keep-it-hundo;
+    // border: 1px dotted white;
 
     .manage_title,
     .container_manage_box {
@@ -65,10 +66,5 @@
         }
       }
     }
-  }
-
-  .container_manage_search {
-    width: 35%;
-    border: 1px solid red;
   }
 }

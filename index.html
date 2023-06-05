@@ -53,7 +53,40 @@
         <div class="container_manage container_manage_data">
           <div class="container_manage_icon_boxes">
             <p class="manage_title">manage</p>
-            <div class="container_manage_box"></div>
+            <div class="container_manage_box">
+              <li class="icons">
+                <i class="fa-solid fa-list"></i>
+                <div class="icons_name">orders</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-circle-minus"></i>
+                <div class="icons_name">add</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-database"></i>
+                <div class="icons_name">customers</div>
+              </li>
+            </div>
+          </div>
+          <div class="container_manage_sort">
+            <label for="sort" class="sort_label">sort by</label>
+            <select class="dropdown" name="dropdown">
+              <!-- <option class="select_text" disabled="" selected="" value="">
+                pickup location
+              </option> -->
+              <option class="select_text" value="dispatch number ascend">
+                dispatch number - ascend
+              </option>
+              <option class="select_text" value="dispatch number descend">
+                dispatch number - descend
+              </option>
+              <option class="select_text" value="customers ascend">
+                customers name - ascend
+              </option>
+              <option class="select_text" value="customers descend">
+                customers name - descend
+              </option>
+            </select>
           </div>
         </div>
       </div>
@@ -61,7 +94,56 @@
         <div class="container_manage container_manage_dispatch">
           <div class="container_manage_icon_boxes">
             <p class="manage_title">manage</p>
-            <div class="container_manage_box"></div>
+            <div class="container_manage_box">
+              <li class="icons">
+                <i class="fa-solid fa-list"></i>
+                <div class="icons_name">orders</div>
+              </li>
+              <li class="icons">
+                <i class="fa-sharp fa-solid fa-download"></i>
+                <div class="icons_name">imports</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-upload"></i>
+                <div class="icons_name">exports</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-circle-chevron-down"></i>
+                <div class="icons_name">drops</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-train"></i>
+                <div class="icons_name">rails</div>
+              </li>
+              <li class="icons">
+                <i class="fa-regular fa-calendar-check"></i>
+                <div class="icons_name">appts</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+                <div class="icons_name">trace</div>
+              </li>
+            </div>
+          </div>
+          <div class="container_manage_sort">
+            <label for="sort" class="sort_label">sort by</label>
+            <select class="dropdown" name="dropdown">
+              <!-- <option class="select_text" disabled="" selected="" value="">
+                pickup location
+              </option> -->
+              <option class="select_text" value="steamship line">
+                steamship line
+              </option>
+              <option class="select_text" value="pickup location">
+                pickup location
+              </option>
+              <option class="select_text" value="customer location">
+                customer location
+              </option>
+              <option class="select_text" value="return location">
+                return location
+              </option>
+            </select>
           </div>
         </div>
       </div>
@@ -70,6 +152,26 @@
           <div class="container_manage_icon_boxes">
             <p class="manage_title">manage</p>
             <div class="container_manage_box"></div>
+          </div>
+          <div class="container_manage_sort">
+            <label for="sort" class="sort_label">sort by</label>
+            <select class="dropdown" name="dropdown">
+              <!-- <option class="select_text" disabled="" selected="" value="">
+                pickup location
+              </option> -->
+              <option class="select_text" value="steamship line">
+                steamship line
+              </option>
+              <option class="select_text" value="pickup location">
+                pickup location
+              </option>
+              <option class="select_text" value="customer location">
+                customer location
+              </option>
+              <option class="select_text" value="return location">
+                return location
+              </option>
+            </select>
           </div>
         </div>
       </div>
@@ -92,14 +194,57 @@
               </li>
             </div>
           </div>
-          <div class="container_manage_search">search box</div>
+          <div class="container_manage_sort">
+            <label for="sort" class="sort_label">sort by</label>
+            <select class="dropdown" name="dropdown">
+              <!-- <option class="select_text" disabled="" selected="" value="">
+                pickup location
+              </option> -->
+              <option class="select_text" value="drivers name ascend">
+                drivers ascend
+              </option>
+              <option class="select_text" value="drivers name descend">
+                drivers descend
+              </option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="containers container_equipment" id="equipment">
         <div class="container_manage container_manage_equipment">
           <div class="container_manage_icon_boxes">
             <p class="manage_title">manage</p>
-            <div class="container_manage_box"></div>
+            <div class="container_manage_box">
+              <li class="icons">
+                <i class="fa-solid fa-truck"></i>
+                <div class="icons_name">tractors</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-trailer"></i>
+                <div class="icons_name">chassis</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-tablet-screen-button"></i>
+                <div class="icons_name">tablets</div>
+              </li>
+            </div>
+          </div>
+          <div class="container_manage_sort">
+            <label for="sort" class="sort_label">sort by</label>
+            <select class="dropdown" name="dropdown">
+              <!-- <option class="select_text" disabled="" selected="" value="">
+                pickup location
+              </option> -->
+              <option class="select_text" value="chassis number ascend">
+                chassis number ascend
+              </option>
+              <option class="select_text" value="chassis number descend">
+                chassis number descend
+              </option>
+              <option class="select_text" value="whimsy yard">
+                whimsy yard
+              </option>
+            </select>
           </div>
         </div>
       </div>
@@ -107,7 +252,36 @@
         <div class="container_manage container_manage_billing">
           <div class="container_manage_icon_boxes">
             <p class="manage_title">manage</p>
-            <div class="container_manage_box"></div>
+            <div class="container_manage_box">
+              <li class="icons">
+                <i class="fa-solid fa-lock-open"></i>
+                <div class="icons_name">open</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-lock"></i>
+                <div class="icons_name">closed</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <div class="icons_name">billed</div>
+              </li>
+            </div>
+          </div>
+          <div class="container_manage_sort">
+            <label for="sort" class="sort_label">sort by</label>
+            <select class="dropdown" name="dropdown">
+              <!-- <option class="select_text" disabled="" selected="" value="">
+                pickup location
+              </option> -->
+              <option class="select_text" value="dispatch number">
+                dispatch number
+              </option>
+              <option class="select_text" value="customer">customer</option>
+              <option class="select_text" value="open cards">open cards</option>
+              <option class="select_text" value="closed cards">
+                closed cards
+              </option>
+            </select>
           </div>
         </div>
       </div>

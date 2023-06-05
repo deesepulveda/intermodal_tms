@@ -1,0 +1,47 @@
+.container_manage_sort {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .sort_label {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.14rem;
+  }
+
+  .dropdown {
+    width: 100%;
+    height: 4rem;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+    outline: transparent;
+    background-color: transparent;
+    border: 1px solid $color-white;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $color-blue;
+    }
+
+    option {
+      height: 4rem;
+      text-transform: uppercase;
+      background-color: $color-black;
+    }
+
+    .select_text {
+      text-transform: uppercase;
+      background-color: $color-black;
+      letter-spacing: 3rem;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+}
