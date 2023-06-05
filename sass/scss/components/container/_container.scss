@@ -1,6 +1,6 @@
 @import "./billing/billing", "./dashboard/dashboard", "./data_entry/data_entry",
   "./dispatch/dispatch", "./drivers/drivers", "./equipment/equipment",
-  "./tracking/tracking";
+  "./tracking/tracking", "./manage/manage";
 
 // MAIN CONTAINER STYLING
 
@@ -21,11 +21,15 @@
     @include transit6;
     background-color: $color-black;
     font-size: 2rem;
-    border: 1px dotted green;
+    // border: 1px dotted green;
   }
 
   .moveLeft {
     left: 0vw;
     z-index: 10;
+  }
+
+  .container_active {
+    left: 0vw;
   }
 }

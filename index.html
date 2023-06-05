@@ -19,6 +19,14 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header">
@@ -35,15 +43,74 @@
       </nav>
     </header>
     <div class="container_main">
-      <div class="containers container_dashboard" id="dashboard">dashboard</div>
-      <div class="containers container_data_entry" id="data_entry">
-        data entry
+      <div
+        class="containers container_dashboard container_active"
+        id="dashboard"
+      >
+        dashboard
       </div>
-      <div class="containers container_dispatch" id="dispatch">dispatch</div>
-      <div class="containers container_tracking" id="tracking">tracking</div>
-      <div class="containers container_drivers" id="drivers">drivers</div>
-      <div class="containers container_equipment" id="equipment">equipment</div>
-      <div class="containers container_billing" id="billing">billing</div>
+      <div class="containers container_data_entry" id="data_entry">
+        <div class="container_manage container_manage_data">
+          <div class="container_manage_icon_boxes">
+            <p class="manage_title">manage</p>
+            <div class="container_manage_box"></div>
+          </div>
+        </div>
+      </div>
+      <div class="containers container_dispatch" id="dispatch">
+        <div class="container_manage container_manage_dispatch">
+          <div class="container_manage_icon_boxes">
+            <p class="manage_title">manage</p>
+            <div class="container_manage_box"></div>
+          </div>
+        </div>
+      </div>
+      <div class="containers container_tracking" id="tracking">
+        <div class="container_manage container_manage_tracking">
+          <div class="container_manage_icon_boxes">
+            <p class="manage_title">manage</p>
+            <div class="container_manage_box"></div>
+          </div>
+        </div>
+      </div>
+      <div class="containers container_drivers" id="drivers">
+        <div class="container_manage container_manage_drivers">
+          <div class="container_manage_icon_boxes">
+            <p class="manage_title">manage</p>
+            <div class="container_manage_box">
+              <li class="icons">
+                <i class="fa-solid fa-circle-plus"></i>
+                <div class="icons_name">add</div>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-circle-minus"></i>
+                <div class="icons_name">remove</div>
+              </li>
+              <li class="icons">
+                <i class="fa-regular fa-calendar-plus"></i>
+                <div class="icons_name">schedule</div>
+              </li>
+            </div>
+          </div>
+          <div class="container_manage_search">search box</div>
+        </div>
+      </div>
+      <div class="containers container_equipment" id="equipment">
+        <div class="container_manage container_manage_equipment">
+          <div class="container_manage_icon_boxes">
+            <p class="manage_title">manage</p>
+            <div class="container_manage_box"></div>
+          </div>
+        </div>
+      </div>
+      <div class="containers container_billing" id="billing">
+        <div class="container_manage container_manage_billing">
+          <div class="container_manage_icon_boxes">
+            <p class="manage_title">manage</p>
+            <div class="container_manage_box"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

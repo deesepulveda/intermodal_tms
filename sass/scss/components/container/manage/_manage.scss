@@ -1,0 +1,74 @@
+@import "./manage_search";
+
+// MANAGE CONTAINER STYLING
+.container_manage {
+  width: 160rem;
+  height: 12rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   border: 1px solid red;
+
+  .container_manage_icon_boxes {
+    width: 100%;
+
+    .manage_title,
+    .container_manage_box {
+      width: 100%;
+    }
+
+    .manage_title {
+      padding: 1rem 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.18rem;
+      text-align: left;
+    }
+
+    .container_manage_box {
+      height: 5rem;
+      padding-left: 10rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      //   border: 1px solid white;
+
+      .icons {
+        width: 10rem;
+        height: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        // border: 1px solid white;
+
+        .icons_name {
+          font-size: 1.2rem;
+          letter-spacing: 0.15rem;
+          @include transit3;
+        }
+
+        i {
+          font-size: 2rem;
+          cursor: pointer;
+          @include transit3;
+
+          &:hover {
+            color: $color-green;
+          }
+
+          &:hover ~ .icons_name {
+            color: $color-green;
+          }
+        }
+      }
+    }
+  }
+
+  .container_manage_search {
+    width: 35%;
+    border: 1px solid red;
+  }
+}
