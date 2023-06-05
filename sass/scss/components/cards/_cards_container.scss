@@ -1,0 +1,26 @@
+.card_container {
+  width: 24rem;
+  height: 52rem;
+  background: url(../public/images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+
+  .card_top_dispNum_lastFree,
+  .card_pickup,
+  .card_return,
+  .card_customer {
+    padding: 1rem;
+    border: 1px solid red;
+    text-shadow: 0.15rem 0.15rem 0.2rem rgba(62, 59, 59, 0.429);
+  }
+}

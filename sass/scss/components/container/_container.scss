@@ -19,9 +19,12 @@
     left: -100vw;
     top: 0;
     @include transit6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background-color: $color-black;
     font-size: 2rem;
-    // border: 1px dotted green;
   }
 
   .moveLeft {

@@ -43,7 +43,7 @@
         flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
-        // border: 1px solid white;
+        position: relative;
 
         .icons_name {
           font-size: 1.2rem;
@@ -64,6 +64,20 @@
             color: $color-green;
           }
         }
+      }
+
+      .icons_order::after {
+        content: "10";
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: -40%;
+        right: -3%;
+        font-size: 1.2rem;
+        color: $color-white;
+        @include flex-center;
+        background-color: red;
+        z-index: -1;
       }
     }
   }
