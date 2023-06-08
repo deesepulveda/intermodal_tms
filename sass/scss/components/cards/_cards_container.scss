@@ -16,11 +16,22 @@
   -o-border-radius: 1rem;
 
   .card_top_dispNum_lastFree,
+  .boxContainer,
   .card_pickup,
   .card_return,
   .card_customer {
+    position: relative;
     padding: 1rem;
-    border: 1px solid red;
-    text-shadow: 0.15rem 0.15rem 0.2rem rgba(62, 59, 59, 0.429);
+    letter-spacing: 0.15rem;
+    text-shadow: 0.15rem 0.15rem 0.2rem rgba(62, 59, 59, 0.287);
+
+    &::after {
+      content: "";
+      width: calc(100% - 2rem);
+      height: 100%;
+      padding: 2rem;
+      @include absol-center;
+      border-bottom: 1px solid $color-black;
+    }
   }
 }
