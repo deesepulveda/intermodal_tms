@@ -274,6 +274,7 @@ body {
 .card_container {
   width: 24rem;
   height: 52rem;
+  color: #000;
   background: url(../public/images/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -293,20 +294,21 @@ body {
 .card_container .card_pickup,
 .card_container .card_return,
 .card_container .card_customer {
-  position: relative;
   padding: 1rem;
   letter-spacing: 0.15rem;
   text-shadow: 0.15rem 0.15rem 0.2rem rgba(62, 59, 59, 0.287);
 }
+.card_container .card_top_dispNum_lastFree,
+.card_container .card_top,
+.card_container .card_return {
+  position: relative;
+}
 .card_container .card_top_dispNum_lastFree::after,
-.card_container .boxContainer::after,
-.card_container .card_pickup::after,
-.card_container .card_return::after,
-.card_container .card_customer::after {
+.card_container .card_top::after,
+.card_container .card_return::after {
   content: "";
   width: calc(100% - 2rem);
   height: 100%;
-  padding: 2rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -315,29 +317,163 @@ body {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  border-bottom: 1px solid #000;
+  border-bottom: 0.1rem solid #000;
+}
+
+.card_customer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card_customer .card_customer_type,
+.card_customer .card_customer_location {
+  width: 100%;
+}
+.card_customer .card_customer_type {
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.card_customer .card_customer_location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.card_customer .card_customer_location .card_customer_location_pcs,
+.card_customer .card_customer_location .card_customer_location_wt,
+.card_customer .card_customer_location .card_customer_location_seal,
+.card_customer .card_customer_location .card_customer_location_det,
+.card_customer .card_customer_location .card_customer_location_billing {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.card_customer .card_customer_location .card_customer_location_billing,
+.card_customer .card_customer_location .card_customer_location_account {
+  margin-top: 1rem;
+}
+.card_customer .card_customer_location .card_customer_location_det,
+.card_customer .card_customer_location .card_customer_location_city {
+  margin-bottom: 0.5rem;
+}
+.card_customer .card_customer_location .card_customer_location_billing {
+  position: relative;
+}
+.card_customer .card_customer_location .card_customer_location_billing::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 1rem);
+  border-top: 0.1rem solid #000;
 }
 
 .card_pickup {
-  border: 1px solid pink;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card_pickup .card_pickup_top {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+.card_pickup .card_pickup_top .card_pickup_top_det {
+  margin-right: 2rem;
+}
+.card_pickup .card_pickup_bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.card_pickup .card_pickup_bottom .card_pickup_bottom_drivers {
+  margin-right: 1.5rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card_pickup .card_pickup_bottom .card_pickup_bottom_drivers li {
+  list-style-type: square;
+}
+.card_pickup .card_pickup_bottom .card_pickup_bottom_rail {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.card_return {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card_return .card_return_top {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+.card_return .card_return_top .card_return_top_det {
+  margin-right: 2rem;
+}
+.card_return .card_return_bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.card_return .card_return_bottom .card_return_bottom_drivers {
+  margin-right: 2rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card_return .card_return_bottom .card_return_bottom_drivers li {
+  list-style-type: square;
+}
+.card_return .card_return_bottom .card_return_bottom_rail {
+  margin-left: 2.75rem;
+  font-size: 1.8rem;
+  font-weight: 800;
 }
 
 .card_top {
   width: 100%;
-  height: 15rem;
   color: #000;
   font-weight: 600;
 }
 .card_top .card_top_yard {
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
   font-weight: 600;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(70, 66, 66, 0.636);
   text-shadow: 0.2rem 0.2rem 0.4rem rgba(62, 59, 59, 0.737);
 }
 .card_top .yard_red {
@@ -373,12 +509,14 @@ body {
   align-items: flex-start;
 }
 .card_top .boxContainer .boxContainer_title {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .card_top .boxContainer .boxContainer_number {
-  margin-bottom: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
+}
+.card_top .boxContainer .boxContainer_number:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
 
 .container_cards_section {

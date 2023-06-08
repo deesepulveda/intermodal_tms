@@ -1,3 +1,39 @@
 .card_pickup {
-  border: 1px solid pink;
+  width: 100%;
+  @include flex-center-col;
+
+  .card_pickup_top {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+
+    .card_pickup_top_det {
+      margin-right: 2rem;
+    }
+  }
+
+  .card_pickup_bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .card_pickup_bottom_drivers {
+      margin-right: 1.5rem;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      li {
+        list-style-type: square;
+      }
+    }
+
+    .card_pickup_bottom_rail {
+      font-size: 2.2rem;
+      font-weight: 800;
+    }
+  }
 }

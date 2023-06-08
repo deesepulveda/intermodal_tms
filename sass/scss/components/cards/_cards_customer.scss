@@ -1,0 +1,56 @@
+.card_customer {
+  width: 100%;
+  @include flex-center-col;
+
+  .card_customer_type,
+  .card_customer_location {
+    width: 100%;
+  }
+
+  .card_customer_type {
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .card_customer_location {
+    @include flex-center-col;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    .card_customer_location_pcs,
+    .card_customer_location_wt,
+    .card_customer_location_seal,
+    .card_customer_location_det,
+    .card_customer_location_billing {
+      width: 100%;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .card_customer_location_billing,
+    .card_customer_location_account {
+      margin-top: 1rem;
+    }
+
+    .card_customer_location_det,
+    .card_customer_location_city {
+      margin-bottom: 0.5rem;
+    }
+
+    .card_customer_location_billing {
+      position: relative;
+
+      &::after {
+        content: "";
+        @include absol-center;
+        width: 100%;
+        height: calc(100% + 1rem);
+        border-top: 0.1rem solid $color-black;
+      }
+    }
+  }
+}

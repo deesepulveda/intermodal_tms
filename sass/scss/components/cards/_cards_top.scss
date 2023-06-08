@@ -1,17 +1,18 @@
 .card_top {
   width: 100%;
-  height: 15rem;
   color: $color-black;
   font-weight: 600;
 
   .card_top_yard {
     width: 100%;
-    height: 4rem;
+    height: 3rem;
     color: $color-white;
     @include flex-center;
+    font-size: 1.4rem;
     font-weight: 600;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(70, 66, 66, 0.636);
     text-shadow: 0.2rem 0.2rem 0.4rem rgba(62, 59, 59, 0.737);
   }
 
@@ -55,13 +56,17 @@
     align-items: flex-start;
 
     .boxContainer_title {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .boxContainer_number {
-      margin-bottom: 0.5rem;
-      font-size: 1.8rem;
+      // margin-bottom: 0.75rem;
+      font-size: 1.6rem;
       font-weight: 600;
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
     }
   }
 }

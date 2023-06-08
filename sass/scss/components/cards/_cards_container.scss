@@ -1,6 +1,7 @@
 .card_container {
   width: 24rem;
   height: 52rem;
+  color: $color-black;
   background: url(../public/images/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -20,18 +21,22 @@
   .card_pickup,
   .card_return,
   .card_customer {
-    position: relative;
     padding: 1rem;
     letter-spacing: 0.15rem;
     text-shadow: 0.15rem 0.15rem 0.2rem rgba(62, 59, 59, 0.287);
+  }
+
+  .card_top_dispNum_lastFree,
+  .card_top,
+  .card_return {
+    position: relative;
 
     &::after {
       content: "";
       width: calc(100% - 2rem);
       height: 100%;
-      padding: 2rem;
       @include absol-center;
-      border-bottom: 1px solid $color-black;
+      border-bottom: 0.1rem solid $color-black;
     }
   }
 }
