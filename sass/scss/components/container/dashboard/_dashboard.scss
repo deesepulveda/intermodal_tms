@@ -1,0 +1,68 @@
+#dashboard {
+  height: calc(100vh - 15rem);
+
+  .dashboard_main {
+    width: 160rem;
+    height: 100%;
+    @include flex-center;
+
+    .stats_hero {
+      width: 70%;
+      height: 100%;
+      @include flex-center-col;
+
+      .stats_hero_top,
+      .stats_hero_middle,
+      .stats_hero_bottom {
+        width: 100%;
+        height: calc(100% / 3);
+        padding: 1rem 0;
+      }
+
+      .stats_hero_top {
+        @include flex-center;
+
+        .stats_hero_top_boxes {
+          width: calc(100% / 4);
+          height: 100%;
+          border: 0.1rem solid $color-white;
+
+          &:not(:last-child) {
+            margin-right: 3rem;
+          }
+        }
+      }
+
+      .stats_hero_middle {
+        @include flex-center;
+        padding: 5rem 0;
+
+        .stats_hero_middle_graph {
+          @include keep-it-hundo;
+          border: 0.1rem solid $color-white;
+        }
+      }
+
+      .stats_hero_bottom {
+        @include flex-center;
+
+        .stats_hero_bottom_graph {
+          @include keep-it-hundo;
+          border: 0.1rem solid $color-white;
+        }
+      }
+    }
+
+    .stats_side {
+      width: 30%;
+      height: 100%;
+      padding: 1rem 0 1rem 5rem;
+
+      .stats_side_box {
+        width: 100%;
+        height: 100%;
+        border: 0.1rem solid $color-white;
+      }
+    }
+  }
+}
