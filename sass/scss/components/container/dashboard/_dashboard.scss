@@ -7,7 +7,7 @@
     @include flex-center;
 
     .stats_hero {
-      width: 70%;
+      width: 75%;
       height: 100%;
       @include flex-center-col;
 
@@ -15,53 +15,142 @@
       .stats_hero_middle,
       .stats_hero_bottom {
         width: 100%;
-        height: calc(100% / 3);
+        // height: calc(100% / 3);
         padding: 1rem 0;
+
+        .stats_hero_title {
+          width: 100%;
+          height: 3rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 1.6rem;
+          letter-spacing: 0.2rem;
+        }
+
+        .stats_hero_graph_container {
+          width: 100%;
+          height: calc(100% - 3rem);
+          border: 0.1rem solid $color-white;
+
+          .stats_hero_graph_top_boxes {
+            height: 65%;
+          }
+
+          .stats_hero_graph_bottom_boxes {
+            height: 35%;
+            background-color: rgba(0, 128, 0, 0.524);
+          }
+
+          .stats_hero_graph_top_boxes,
+          .stats_hero_graph_bottom_boxes {
+            width: 100%;
+            @include flex-center-col;
+
+            .stats_hero_graph_title,
+            .stats_hero_graph_lower_boxes {
+              width: 100%;
+              padding: 0 1rem;
+              font-size: 1.3rem;
+              letter-spacing: 0.2rem;
+            }
+
+            .stats_hero_graph_title {
+              height: auto;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+            }
+
+            .stats_hero_graph_lower_boxes {
+              height: calc(100% - 3rem);
+            }
+          }
+
+          .stats_hero_graph_rail_container {
+            @include keep-it-hundo;
+            @include flex-center;
+
+            .stats_hero_graph_rails {
+              width: calc(100% / 6);
+              height: 100%;
+              position: relative;
+
+              &:not(:last-child)::after {
+                content: "";
+                width: 100%;
+                height: 65%;
+                @include absol-center;
+                border-right: 1px solid $color-white;
+              }
+            }
+          }
+        }
       }
 
       .stats_hero_top {
+        height: 35%;
         @include flex-center;
 
         .stats_hero_top_boxes {
           width: calc(100% / 4);
           height: 100%;
-          border: 0.1rem solid $color-white;
+          @include flex-center-col;
 
           &:not(:last-child) {
-            margin-right: 3rem;
+            margin-right: 5rem;
           }
         }
       }
 
       .stats_hero_middle {
-        @include flex-center;
-        padding: 5rem 0;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem 0;
 
         .stats_hero_middle_graph {
           @include keep-it-hundo;
-          border: 0.1rem solid $color-white;
         }
       }
 
       .stats_hero_bottom {
-        @include flex-center;
+        height: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
 
         .stats_hero_bottom_graph {
           @include keep-it-hundo;
-          border: 0.1rem solid $color-white;
         }
       }
     }
 
     .stats_side {
-      width: 30%;
+      width: 25%;
       height: 100%;
       padding: 1rem 0 1rem 5rem;
 
       .stats_side_box {
         width: 100%;
         height: 100%;
-        border: 0.1rem solid $color-white;
+        @include flex-center-col;
+
+        .stats_side_title {
+          width: 100%;
+          height: 3rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 1.6rem;
+          letter-spacing: 0.2rem;
+        }
+
+        .stats_side_graph_container {
+          @include keep-it-hundo;
+          border: 0.1rem solid $color-white;
+        }
       }
     }
   }
